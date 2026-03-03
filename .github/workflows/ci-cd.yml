@@ -45,3 +45,9 @@ jobs:
       - name: Push frontend image
         run: |
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/frontend:latest
+
+      - name: Lancer Docker Compose
+        run: docker-compose up -d
+
+      - name: Vérifier les conteneurs
+        run: docker ps

@@ -24,7 +24,7 @@ jobs:
       # 3️⃣ Build backend (springboot)
       - name: Build backend image
         run: |
-          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest ./springboot
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/backend:latest ./springboot/app
 
       # 4️⃣ Build frontend (angular-app)
       - name: Build frontend image

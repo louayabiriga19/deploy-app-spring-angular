@@ -21,6 +21,11 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Build Spring Boot app
+        run: |
+          cd springboot/app
+          mvn clean package -DskipTests
+
       # 3️⃣ Build backend (springboot)
       - name: Build backend image
         run: |
